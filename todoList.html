@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Practical JavaScript</title>
+  </head>
+
+  <body>
+
+    <button id="display-todos-button">Display Todos</button>
+    <button id="toggle-all-button">Toggle All</button>
+
+    <script>
+
+      var displayTodosButton = document.getElementById('display-todos-button');
+      displayTodosButton.addEventListener('click', displayTodos);
+
+      var displayTodosButton = document.getElementById('toggle-all-button');
+      displayTodosButton.addEventListener('click', toggleAll);
+
+      var todos = [
+        {todoText: 'Item 1', completed: false},
+        {todoText: 'Item 2', completed: false},
+        {todoText: 'Item 3', completed: false}
+      ];
+
+      function displayTodos(){
+        for (var index = 0; index < todos.length; index++) {
+          console.log("Todo", (index+1), ": ", todos[index].todoText,
+            " - ", todos[index].completed ? "Completed!" : "Not yet Completed"); 
+        }
+      }
+      
+      function addTodo(newTodo){ 
+        todos.push({todoText: newTodo, completed: false});
+        displayTodos();
+      }
+
+      function updateTodo(position, newTodoText){ 
+        todos[position].todoText = newTodoText;
+        displayTodos();
+      }
+
+      function removeTodo(position){
+        todos.splice(position, 1);
+        displayTodos();
+      }
+
+      function toggle(position){
+        if(todos[position].completed === false){
+          todos[position].completed = true;
+        }else{
+          todos[position].completed = false;
+        }
+        displayTodos();
+      }
+
+      function toggleAll(){
+        var trueCounter = 0;
+
+        for (var index = 0; index < todos.length; index++) {
+          if(todos[index].completed == true){
+            trueCounter++;
+          }
+        }
+
+        if(trueCounter < todos.length){ // Atleast one of the todos is false
+          for (var index = 0; index < todos.length; index++) {
+            todos[index].completed = true;
+          }
+        }else{
+          for (var index = 0; index < todos.length; index++) {
+            todos[index].completed = false;
+          }
+        }
+
+        displayTodos();
+      }
+      
+    </script>
+  </body>
+</html>

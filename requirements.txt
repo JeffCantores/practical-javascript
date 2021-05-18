@@ -1,0 +1,36 @@
+Version 7
+  [/] It should have a displayTodos button
+  [/] The displayTodos button should run the displayTodos function
+  [/] It should have a toggleAll button
+  [/] the toggleAll button should run the toggleAll function
+
+Version 6
+  [/] Should have a function for toggling all todos
+  [/] If everything is false ==> change everything to true
+  [/] If everything is true ==> change everything to false
+  [/] If mixed (if atleast one is false) ==> change everything to true
+
+Version 5
+  [/] It should have a function for displaying todos
+  [/] displayTodos should show the todoText properly
+  [/] displayTodos should show the completed property
+
+Version 4
+  [/] It should have a function to toggle a todo
+
+Version 3
+  [/] We should initialize the todos variable with objects
+  [/] The add function should add objects
+  [/] The edit function should edit objects
+
+Version 2 
+  [/] It should have a function to add a todo
+  [/] It should have a function to edit a todo
+  [/] It should have a function to remove a todo
+
+Version 1
+  [/] It should have a place to store todos
+  [/] It should have a way to display todos
+  [/] It should have a way to add a todo
+  [/] It should have a way to edit a todo
+  [/] It should have a way to remove a todo
