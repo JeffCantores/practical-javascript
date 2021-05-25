@@ -39,6 +39,7 @@
       
       function addTodo(){ 
         todos.push({todoText: inputTodo.value, completed: false});
+        inputTodo.value = '';
         displayTodos();
       }
 
