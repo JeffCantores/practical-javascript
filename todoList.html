@@ -9,7 +9,9 @@
 
     <button id="display-todos-button">Display Todos</button>
     <button id="toggle-all-button">Toggle All</button>
-
+    <input id="new-todo" type="text" placeholder="Enter new todo here">
+    <button id="add-button" onclick="">Add Todo</button>
+   
     <script>
 
       var displayTodosButton = document.getElementById('display-todos-button');
@@ -17,6 +19,10 @@
 
       var displayTodosButton = document.getElementById('toggle-all-button');
       displayTodosButton.addEventListener('click', toggleAll);
+
+      var addButton = document.getElementById('add-button');
+      var inputTodo = document.getElementById('new-todo');
+      addButton.addEventListener('click', addTodo);
 
       var todos = [
         {todoText: 'Item 1', completed: false},
@@ -31,8 +37,8 @@
         }
       }
       
-      function addTodo(newTodo){ 
-        todos.push({todoText: newTodo, completed: false});
+      function addTodo(){ 
+        todos.push({todoText: inputTodo.value, completed: false});
         displayTodos();
       }
 

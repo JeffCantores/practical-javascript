@@ -1,0 +1,30 @@
+function demoFunction() {}
+
+var experiment1 = demoFunction;
+var experiment2 = demoFunction();
+
+experiment1;
+ƒ demoFunction() {}
+
+experiment2;
+undefined
+
+---------------------------------------------------------------------------
+
+function demoFunctionThatReturnsAString() {
+    return 'a string';
+}
+
+var experiment3 = demoFunctionThatReturnsAString;
+var experiment4 = demoFunctionThatReturnsAString();
+
+experiment3
+ƒ demoFunctionThatReturnsAString() {
+    return 'a string';
+}
+
+experiment4
+"a string"
+
+# The variable experiment4 has the value 'a string' because the value assigned 
+	to the variable is a function call that returns a value, that is 'a string'.
