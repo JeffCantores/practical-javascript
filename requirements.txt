@@ -1,8 +1,8 @@
 Version 8
   [/] There should be a working button for adding a todo
-  [] There should be a working button for editing a todo
-  [] There should be a working button for removing a todo
-  [] There should be a working button for toggling a todo
+  [/] There should be a working button for editing a todo
+  [/] There should be a working button for removing a todo
+  [/] There should be a working button for toggling a todo
 
 Version 7
   [/] It should have a displayTodos button
