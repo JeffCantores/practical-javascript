@@ -46,7 +46,7 @@
 
         for (var index = 0; index < todos.length; index++) {
           var listItem = document.createElement('li');
-          listItem.innerHTML = todos[index].todoText + " - " + (todos[index].completed ? "Completed!" : "Not yet Completed");
+          listItem.innerHTML = (todos[index].completed ? "[/] " : "[ ] ") + todos[index].todoText;
 
           todosList.appendChild(listItem);
         }
