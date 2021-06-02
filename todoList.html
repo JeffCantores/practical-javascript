@@ -42,6 +42,7 @@
 
       function displayTodos(){
         var todosList = document.getElementById('todos-list-ul');
+        todosList.innerHTML = '';
 
         for (var index = 0; index < todos.length; index++) {
           var listItem = document.createElement('li');
