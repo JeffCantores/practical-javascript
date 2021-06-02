@@ -60,25 +60,24 @@
 
       function updateTodo(){ 
         todos[editPosition.value - 1].todoText = editText.value;
-        editPosition.value = -1;
+        editPosition.value = 0;
         editText.value = "";
         displayTodos();
       }
 
       function removeTodo(){
         todos.splice(removePosition.value - 1, 1);
-        removePosition.value = -1;
+        removePosition.value = 0;
         displayTodos();
       }
 
       function toggle(){
-        var toggle = togglePosition.value - 1;
-        if(todos[toggle].completed === false){
-          todos[toggle].completed = true;
+        if(todos[togglePosition.value - 1].completed === false){
+          todos[togglePosition.value - 1].completed = true;
         }else{
-          todos[toggle].completed = false;
+          todos[togglePosition.value - 1].completed = false;
         }
-        toggle = -1;
+        togglePosition.value = 0;
         displayTodos();
       }
 

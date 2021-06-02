@@ -1,5 +1,6 @@
 Version 9
   [/] There should be an <li> for every todo
+  [/] Each <li> should show the todoText property
 
 Version 8
   [/] There should be a working button for adding a todo
