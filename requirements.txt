@@ -1,3 +1,6 @@
+Version 9
+  [/] There should be an <li> for every todo
+
 Version 8
   [/] There should be a working button for adding a todo
   [/] There should be a working button for editing a todo

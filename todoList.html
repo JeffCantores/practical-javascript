@@ -28,6 +28,9 @@
     <button id="toggle-button">Toggle Todo</button>
     <input id="toggle-position" type="number" placeholder="Toggle position">
     
+    <ul id="todos-list-ul">
+    </ul>
+
    
     <script>
 
@@ -38,9 +41,13 @@
       ];
 
       function displayTodos(){
+        var todosList = document.getElementById('todos-list-ul');
+
         for (var index = 0; index < todos.length; index++) {
-          console.log("Todo", (index+1), ": ", todos[index].todoText,
-            " - ", todos[index].completed ? "Completed!" : "Not yet Completed"); 
+          var listItem = document.createElement('li');
+          listItem.innerHTML = todos[index].todoText + " - " + (todos[index].completed ? "Completed!" : "Not yet Completed");
+
+          todosList.appendChild(listItem);
         }
       }
       
