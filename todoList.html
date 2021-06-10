@@ -19,8 +19,8 @@
     <input id="edit-text" type="text" placeholder="Enter new todo here">
 
     <!-- Removing a todo -->
-    <button id="remove-button">Remove Todo</button>
-    <input id="remove-position" type="number" placeholder="Remove position">
+    <!-- <button id="remove-button">Remove Todo</button>
+    <input id="remove-position" type="number" placeholder="Remove position"> -->
     
     <!-- Toggling a todo -->
     <button id="toggle-button">Toggle Todo</button>
@@ -50,6 +50,10 @@
           // added remove button for every list element
           var removeButton = document.createElement('button');
           removeButton.innerText = 'Remove';
+
+          // Add the event listener
+          removeButton.addEventListener('click', removeTodo);
+
           listItem.appendChild(removeButton);
         }
       }
@@ -67,10 +71,14 @@
         displayTodos();
       }
 
+      // function removeTodo(){
+      //   todos.splice(removePosition.value - 1, 1);
+      //   removePosition.value = 0;
+      //   displayTodos();
+      // }
+
       function removeTodo(){
-        todos.splice(removePosition.value - 1, 1);
-        removePosition.value = 0;
-        displayTodos();
+        console.log("Remove button is working");
       }
 
       function toggle(){
@@ -117,9 +125,9 @@
       var editText = document.getElementById('edit-text');
       editButton.addEventListener('click', updateTodo);
 
-      var removePosition = document.getElementById('remove-position');
-      var removeButton = document.getElementById('remove-button');
-      removeButton.addEventListener('click', removeTodo);
+      // var removePosition = document.getElementById('remove-position');
+      // var removeButton = document.getElementById('remove-button');
+      // removeButton.addEventListener('click', removeTodo);
 
       var togglePosition = document.getElementById('toggle-position');
       var toggleButton = document.getElementById('toggle-button');
