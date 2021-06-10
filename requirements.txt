@@ -1,3 +1,8 @@
+Version 10
+  [/] Each todo should have its own remove button
+  [ ] The remove buttons should actually work
+
+
 Version 9
   [/] There should be an <li> for every todo
   [/] Each <li> should show the todoText property

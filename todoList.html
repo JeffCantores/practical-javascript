@@ -7,8 +7,6 @@
 
   <body>
 
-    <button id="display-todos-button">Display Todos</button>
-
     <button id="toggle-all-button">Toggle All</button>
 
     <!-- Adding a todo -->
@@ -47,8 +45,12 @@
         for (var index = 0; index < todos.length; index++) {
           var listItem = document.createElement('li');
           listItem.innerHTML = (todos[index].completed ? "[/] " : "[ ] ") + todos[index].todoText;
-
           todosList.appendChild(listItem);
+
+          // added remove button for every list element
+          var removeButton = document.createElement('button');
+          removeButton.innerText = 'Remove';
+          listItem.appendChild(removeButton);
         }
       }
       
@@ -103,11 +105,8 @@
         displayTodos();
       }
 
-      var displayTodosButton = document.getElementById('display-todos-button');
-      displayTodosButton.addEventListener('click', displayTodos);
-
-      var displayTodosButton = document.getElementById('toggle-all-button');
-      displayTodosButton.addEventListener('click', toggleAll);
+      var toggleAllButton = document.getElementById('toggle-all-button');
+      toggleAllButton.addEventListener('click', toggleAll);
 
       var addButton = document.getElementById('add-button');
       var inputTodo = document.getElementById('new-todo');
